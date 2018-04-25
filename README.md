@@ -19,7 +19,7 @@ Note: If an error occurs for incompatibility, then right click on project -> Sca
 select Rename. Rename 'java' as 'scala'
 
 10. Right click on src/main/scala and select New -> Package. Name the package
- as 'org.SparkWC'(Same name as you have given for 'Group Id' in step 4)
+ as 'org.SparkWC'
  
 11. Right click on the package(org.SparkWC) and select New -> Scala Object.
 Name it as 'org.SparkWC.Driver'
@@ -45,17 +45,15 @@ old .jar files in the 'target' folder
 4.1 data from http://webpages.uncc.edu/aatzache/ITCS6190/Exercises/ActionRulesList.txt 
 4.2 data.txt from http://webpages.uncc.edu/aatzache/ITCS6162/Project/Data/MammographicMassData/MammData.zip 	
 
-5. Copy data file and SparkScalaWC.jar files to your UNCC account using WinSCP or CyberDuck
-
-6. Copy data.txt to HDFS using the command:
+5.Copy data.txt to HDFS using the command:
     hadoop fs -put /users/UserName/data.txt /user/UserName/
     
-7. Run the program using the command:
+6. Run the program using the command:
     spark2-submit --class org.SparkWC.Driver  --master yarn --deploy-mode client
     location-to-jar-file location-to-data-input location-to-output-directory
 
-8. Copy the output to your server using the command:
-hadoop fs -get /user/UNCCUserName/SparkWCout_1/part-00000
+7. Copy the output to your server using the command:
+hadoop fs -get /user/UserName/SparkWCout_1/part-00000
     /users/UserName/SparkWCOutput_1.txt
 
 
@@ -80,7 +78,7 @@ Note: If an error occurs for incompatibility, then right click on project -> Sca
 select Rename. Rename 'java' as 'scala'
 
 10. Right click on src/main/scala and select New -> Package. Name the package
- as 'org.SparkML'(Same name as you have given for 'Group Id' in step 4)
+ as 'org.SparkML'
  
 11. Right click on the package(org.SparkWC) and select New -> Scala Object.
 Name it as 'org.SparkML.DecisionTreeDriver"'
@@ -107,17 +105,15 @@ old .jar files in the 'target' folder
 Data.txt from 
 http://webpages.uncc.edu/aatzache/ITCS6162/Project/Data/CarEvaluationData/CarData.zip 
 
-5. Copy data file and SparkDecisionTrees.jar files to your UNCC account using WinSCP or CyberDuck
-
-6. Copy data.txt to HDFS using the command:
-    hadoop fs -put /users/UNCCUserName/data.txt /user/UNCCUserName/
+5.Copy data.txt to HDFS using the command:
+    hadoop fs -put /users/UserName/data.txt /user/UserName/
     
-7. Run the program using the command:
+6. Run the program using the command:
     spark2-submit --class org.SparkML.DecisionTreeDriver  --master yarn --deploy-mode client
     location-to-jar-file location-to-data-input location-to-output-directory
 
-8. Copy the output to your server using the command:
+7. Copy the output to your server using the command:
 hadoop fs -get /user/UNCCUserName/SparkWCout_1/part-00000
-    /users/UNCCUserName/SparkDTOutput_1.txt
+    /users/UserName/SparkDTOutput_1.txt
 
 
